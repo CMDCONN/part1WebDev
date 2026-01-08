@@ -21,7 +21,6 @@
 html, body {
     margin: 0;
     padding: 0;
-    height: 100%;
     width: 100%;
     font-family: MontserratItalic, sans-serif;
     margin-top:10px
@@ -59,6 +58,11 @@ body {
 }
 
 .splitDiv{
+    float:right;
+    margin-right: 40px;
+}
+
+.imageRight{
     float:right;
     margin-right: 40px;
 }
@@ -116,7 +120,104 @@ body {
     border-radius: 10px;
 }
 
+@media only screen and (max-device-width: 1230px) {
+    .navIcon{
+    font-size: 20px;
+    font-family: inkProphecy, sans-serif;
+}
+}
 
-@media only screen and (max-device-width: 480px) {
-    
+@media only screen and (max-device-width: 1000px) {
+html, body {
+    height: auto;
+    min-height: 100vh;
+}
+.navIcon{
+    visibility: hidden;
+    font-family: inkProphecy, sans-serif;
+}
+.mTextBox{
+    margin-top: 10px;
+    height: auto;
+    margin-bottom: 0;
+}
+.imageRight{
+    visibility: hidden;
+    height: 0px;
+    width: 0px;
+}
+.mTextBoxBig{
+    height:auto;
+    font-size: 20px;
+    margin: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+
+}
+.mTextBox{
+    margin-top:10px;
+    padding-top: 10px 0px 0px 0px;
+}
+.topnav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin-left: 0;
+    background-color: rgba(27, 17, 18, 0.98); /* More opaque dark background */
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+}
+.topnav a {
+    float: none;
+    flex: 1;
+    text-align: center;
+    color: #ffffff !important; /* White text for visibility on dark navbar */
+}
+.topnav a.split div.split {
+    color: white;
+}
+.topnav .navIcon {
+    color: #ffffff !important; /* Ensure navIcon text is white if visible */
+}
+
+.splitDiv{
+    float: none;
+    margin-right: 0;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.rightBox{
+    margin-top: 0;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    border-radius: 0;
+    padding: 0;
+}
+
+.rightBoxFont{
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 25px;
+    margin: 0;
+    display: inline-block;
+}
+
+.mTextBoxMed{
+    font-size: 20px;
+    width: 200px;
+}
+body {
+    padding-bottom: 70px; /* Add padding to prevent content from being hidden behind fixed navbar */
+    min-height: auto; /* Allow body to shrink to content size */
+}
 }
