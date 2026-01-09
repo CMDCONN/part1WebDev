@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="icon" type="image/x-icon" href="../static/images/favicon.ico">
+    <link rel="manifest" href="../static/manifest.json">
+    <title>Sunbucks</title>
+</head>
+
+<body>
+    <div class="topnav">
+        <a href="home.html" class="navIcon">Sunbucks</a>
+        <div class="splitDiv">
+            <div class="rightBox" style="display: inline-block; vertical-align: middle;">
+                <a href="menu.html" class="rightBoxFont">Menu</a>
+                <a href="contact.html" class="rightBoxFont">Contact</a>
+                <a href="findUs.html" class="rightBoxFont">Find Us</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="findUsContainer">
+        <h1 class="findUsTitle">Find Us</h1>
+        <div class="findUsMap" id="map"></div>
+        <p style="color: white; text-align: center;">Stoke-on-Trent ST4 2EF, United Kingdom, Cadman Campus</p>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+
+
+
+    <!-- This script is not mine and is from the Leaflet website quickstart guide https://leafletjs.com/examples/quick-start.html -->
+    <script>
+        var sunbucks = [53.014319, -2.179205];
+        var map = L.map('map').setView(sunbucks, 13);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+        L.marker(sunbucks).addTo(map).bindPopup('Sunbucks');
+        
+        // Uses API Number 1 to get your IP address
+        fetch('https://api.ipify.org?format=json')
+            .then(response => response.json())
+            .then(data => {
+                var myIP = data.ip;
+                
+                // Uses API Number 2 to get your location from your IP address
+                fetch(`http://ip-api.com/json/${myIP}?fields=lat,lon`)
+                    .then(response => response.json())
+                    .then(locationData => {
+                        var userLoc = [locationData.lat, locationData.lon];
+                        L.marker(userLoc).addTo(map).bindPopup('Your Location');
+                        map.fitBounds([sunbucks, userLoc]);
+                    });
+            });
+    </script>
+
+</body>
+</html>

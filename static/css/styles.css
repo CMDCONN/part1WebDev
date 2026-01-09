@@ -35,6 +35,11 @@ body {
     background-position: center;
 }
 
+.emailLink{
+    color: white;
+    text-decoration: underline;
+}
+
 .topnav {
     margin-left: 40px;
     overflow: hidden;
@@ -46,6 +51,24 @@ body {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+}
+
+.findUsContainer{
+    margin: 50px auto;
+    max-width: 900px;
+    padding: 20px;
+}
+
+.findUsTitle{
+    color: white;
+    text-align: center;
+}
+
+.findUsMap{
+    width: 100%;
+    height: 400px;
+    margin: 20px 0;
+    border-radius: 10px;
 }
 
 .navIcon{
@@ -61,6 +84,9 @@ body {
 .splitDiv{
     float:right;
     margin-right: 40px;
+    display: flex;
+    align-items: center;
+    gap: 0;
 }
 
 .imageRight{
@@ -70,7 +96,7 @@ body {
 
 .rightBox{
     margin-top: 8px;
-    width: 408px;
+    width: 435px;
     height: 60px;
     background-color: white;
     border-radius: 50px;
@@ -121,6 +147,79 @@ body {
     border-radius: 10px;
 }
 
+
+.menuContainer {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 40px;
+    color: white;
+}
+
+.menuItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+    gap: 40px;
+}
+
+.menuDescription {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.menuCategory {
+    font-family: inkProphecy, sans-serif;
+    font-size: 48px;
+    color: #f2f2f2;
+    margin-bottom: 30px;
+    margin-top: 40px;
+}
+
+.menuItemTitle {
+    font-family: MySecondaryFont, sans-serif;
+    font-size: 32px;
+    color: #ffffff;
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+
+.menuItemText {
+    font-family: MontserratItalic, sans-serif;
+    font-size: 18px;
+    color: #e0e0e0;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.menuPrice {
+    font-family: MySecondaryFont, sans-serif;
+    font-size: 24px;
+    color: #ffffff;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.menuImage {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuImage img {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.menuPlaceholder {
+    opacity: 0.7;
+    filter: brightness(0.9);
+}
+
 @media only screen and (max-device-width: 1230px) {
     .navIcon{
     font-size: 20px;
@@ -164,7 +263,7 @@ html, body {
     right: 0;
     width: 100%;
     margin-left: 0;
-    background-color: rgba(27, 17, 18, 0.98); /* More opaque dark background */
+    background-color: rgba(27, 17, 18, 0.98);
     backdrop-filter: blur(10px);
     z-index: 1000;
     display: flex;
@@ -177,13 +276,13 @@ html, body {
     float: none;
     flex: 1;
     text-align: center;
-    color: #ffffff !important; /* White text for visibility on dark navbar */
+    color: #ffffff !important;
 }
 .topnav a.split div.split {
     color: white;
 }
 .topnav .navIcon {
-    color: #ffffff !important; /* Ensure navIcon text is white if visible */
+    color: #ffffff !important;
 }
 
 .splitDiv{
@@ -216,8 +315,55 @@ html, body {
     font-size: 20px;
     width: 200px;
 }
+
+/* Mobile Menu Styles */
+.menuContainer {
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.menuItem {
+    flex-direction: column;
+    margin-bottom: 40px;
+    gap: 20px;
+}
+
+.menuDescription {
+    padding-right: 0;
+    width: 100%;
+}
+
+.menuCategory {
+    font-size: 32px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.menuItemTitle {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.menuItemText {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.menuPrice {
+    font-size: 20px;
+}
+
+.menuImage {
+    width: 100%;
+}
+
+.menuImage img {
+    max-height: 200px;
+    width: 100%;
+}
+
 body {
-    padding-bottom: 70px; /* Add padding to prevent content from being hidden behind fixed navbar */
-    min-height: auto; /* Allow body to shrink to content size */
+    padding-bottom: 70px;
+    min-height: auto;
 }
 }
