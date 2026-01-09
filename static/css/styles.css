@@ -206,6 +206,8 @@ body {
     align-items: center;
 }
 
+/* https://www.w3schools.com/css/css3_shadows_box.asp */
+
 .menuImage img {
     max-width: 100%;
     height: auto;
@@ -215,7 +217,9 @@ body {
     box-shadow: 0 4px 15px #000000;
 }
 
-.menuPlaceholder {
+/* https://www.w3schools.com/css/css3_shadows_box.asp */
+
+.menuImage {
     opacity: 0.7;
     filter: brightness(0.9);
 }
@@ -273,18 +277,17 @@ html, body {
     padding: 10px 0;
     box-shadow: 0 -2px 10px #000000;
 }
+
+/* https://www.w3schools.com/css/css3_shadows_box.asp */
+/* https://www.w3schools.com/cssref/css3_pr_backdrop-filter.php */
+
 .topnav a {
     float: none;
     flex: 1;
     text-align: center;
-    color: #ffffff !important;
+    color: #ffffff;
 }
-.topnav a.split div.split {
-    color: white;
-}
-.topnav .navIcon {
-    color: #ffffff !important;
-}
+
 
 .splitDiv{
     float: none;
@@ -315,7 +318,7 @@ html, body {
     width: 200px;
 }
 
-/* Mobile Menu Styles */
+
 .menuContainer {
     margin: 20px auto;
     padding: 0 20px;
@@ -352,6 +355,8 @@ html, body {
     font-size: 20px;
 }
 
+/* I dont fully understand why it is that i needed to add the same styles twice to the same element using class and referencing the img element at the same time but it works */
+
 .menuImage {
     width: 100%;
 }
@@ -360,6 +365,8 @@ html, body {
     max-height: 200px;
     width: 100%;
 }
+
+/* I dont fully understand why it is that i needed to add the same styles twice to the same element using class and referencing the img element at the same time but it works */
 
 body {
     padding-bottom: 70px;

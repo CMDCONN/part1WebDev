@@ -1,7 +1,7 @@
 {
   "name": "Sunbucks - Coffee & More",
   "short_name": "Sunbucks",
-  "description": "A neighborhood spot for thoughtfully brewed coffee, fresh pastries, and unhurried moments.",
+  "description": "A neighborhood spot for thoughtfully brewed coffee, fresh food, and unhurried moments.",
   "start_url": "/templates/home.html",
   "display": "standalone",
   "background_color": "#1b1112",
@@ -9,8 +9,8 @@
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "/static/images/favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "src": "/static/images/coffeeCupIcon.ico",
+      "sizes": "32x32",
       "type": "image/x-icon"
     },
     {
